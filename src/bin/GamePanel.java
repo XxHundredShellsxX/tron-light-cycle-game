@@ -22,22 +22,13 @@ public class GamePanel extends JPanel implements KeyListener{
 
     //all the images used in the game
     //new ImageIcon("src\\resources\\AttackSprites\\FireDisk.png").getImage();
-    Image back = new ImageIcon("src\\resources\\tron_bg.jpg").getImage();//title screen background
-    Image gameBg = new ImageIcon("src\\resources\\grid.jpg").getImage(); //game background
-    Image shieldIC = new ImageIcon("src\\resources\\shield.png").getImage();//shield icon
-    Image curseIC = new ImageIcon("src\\resources\\cursed.png").getImage(); //curse icon
-    Image RedWinIC = new ImageIcon("src\\resources\\red-win.jpg").getImage(); //image for when red wins
-    Image BlueWinIC = new ImageIcon("src\\resources\\blue-win.png").getImage();//image for when blue wins
-    Image ControlsIG = new ImageIcon("src\\resources\\Controls.jpg").getImage();//controls image page
-    Image RedCycleUP = new ImageIcon("src\\resources\\red-up.png").getImage();
-    Image RedCycleRIGHT = new ImageIcon("src\\resources\\red-right.png").getImage();
-    Image RedCycleLEFT = new ImageIcon("src\\resources\\red-left.png").getImage();
-    Image RedCycleDOWN = new ImageIcon("src\\resources\\red-down.png").getImage();
-
-    Image BlueCycleUP = new ImageIcon("src\\resources\\blue-up.png").getImage();
-    Image BlueCycleRIGHT = new ImageIcon("src\\resources\\blue-right.png").getImage();
-    Image BlueCycleLEFT = new ImageIcon("src\\resources\\blue-left.png").getImage();
-    Image BlueCycleDOWN = new ImageIcon("src\\resources\\blue-down.png").getImage();
+    Image back = new ImageIcon(getClass().getClassLoader().getResource("tron_bg.jpg")).getImage();//title screen background
+    Image gameBg = new ImageIcon(getClass().getClassLoader().getResource("grid.jpg")).getImage(); //game background
+    Image shieldIC = new ImageIcon(getClass().getClassLoader().getResource("shield.png")).getImage();//shield icon
+    Image curseIC = new ImageIcon(getClass().getClassLoader().getResource("cursed.png")).getImage(); //curse icon
+    Image RedWinIC = new ImageIcon(getClass().getClassLoader().getResource("red-win.jpg")).getImage(); //image for when red wins
+    Image BlueWinIC = new ImageIcon(getClass().getClassLoader().getResource("blue-win.png")).getImage();//image for when blue wins
+    Image ControlsIG = new ImageIcon(getClass().getClassLoader().getResource("Controls.jpg")).getImage();//controls image page
     private String menuSelection = "start",contSelection = "start"; //preset states for various selections
     private String gameState = "menu"; //state for the game
     private String[] menuSelections,contSelections;
